@@ -30,6 +30,8 @@ Here $\alpha$ represents a coefficient < 1, that represents energy losses and th
 
 As computation is relatively simple, I decided to implement the algorithm both in C++ and on FPGA.
 
+The medium is sliced into 100 finite pieces, governed by the equations above.
+
 I was interested into how the FPGA performed against a CPU, especially since my FPGA was pretty small, only having 9 thousand logic units.
 
 The goal of the project was both to validate the results computed on the FPGA and compare the computation speed to the C++ implementation.
