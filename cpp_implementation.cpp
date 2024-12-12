@@ -7,7 +7,7 @@
 void cell(int u, int du, int uL, int uR, int &u_new, int &du_new) {
     long int tmp; // 64 bit integer
     
-    tmp = (4 * (uL + uR - 2*u)) >> 8;
+    tmp = 4 * (uL + uR - 2*u) >> 8;
     if(tmp == -1){
         tmp = 0;
     }
@@ -17,7 +17,7 @@ void cell(int u, int du, int uL, int uR, int &u_new, int &du_new) {
         du_new = 0;
     }
 
-    tmp = (long int) u + ((1*(du)) >> 8);
+    tmp = u + (du >> 8);
     tmp = (tmp * 2047) >> 11;
     u_new = tmp;
 
