@@ -1,0 +1,42 @@
+//
+//Written by GowinSynthesis
+//Tool Version "V1.9.10.03 Education"
+//Thu Dec 12 16:42:16 2024
+
+//Source file index table:
+//file0 "\/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v"
+`pragma protect begin_protected
+`pragma protect version="2.3"
+`pragma protect author="default"
+`pragma protect author_info="default"
+`pragma protect encrypt_agent="GOWIN"
+`pragma protect encrypt_agent_info="GOWIN Encrypt Version 2.3"
+
+`pragma protect encoding=(enctype="base64", line_length=76, bytes=256)
+`pragma protect key_keyowner="GOWIN",key_keyname="GWK2023-09",key_method="rsa"
+`pragma protect key_block
+pUjqgSmLeP/TWnmHOY3zgwxsh6fVSBpMHVW8g32LmdtnUy4l/JSfSRUErASFGms2ndddGbTZRhJk
+v26SU5AEllFKgqNoMesSpohueyqiluvU1qiM4pk9ZFXia9MpCFQLpbARBM6xv6FqfoO6y2ySlnCn
+hMVkVaQBNWjWLfvBGh/BRLCBnuVuqZQ0WCrc8Z352OtVRZ5c2pPIYXdsBGWwLxJnOG8QjrHlv/Lq
+WYZX3y45RvFzICBCj1d4Fwoq7qZHif2V0GcMUgWlGqZe0xYS4v+ZsoTtI43xjFhMIhgHrbKV+KEJ
+eycsT0ljYmIvsmb/V67uO2VXI101sqX+aCt3Og==
+
+`pragma protect encoding=(enctype="base64", line_length=76, bytes=736)
+`pragma protect data_keyowner="default-ip-vendor"
+`pragma protect data_keyname="default-ip-key"
+`pragma protect data_method="aes128-cfb"
+`pragma protect data_block
+AcjQyIfDBwynOiDQn9+I6TDntHeBrrIkTDP9Y+2+mhjFwPEhQeDBjrT4SkrlS1UysbTTQ6T82r/v
+/RSnZpXyJCGs2Et/kfFksEL98sWrIcr69RGegzwyJUWn6HmejOU80Tg9xoGE+chVNknzR4A9xrnZ
+QLtIAx7rpCVCf61EukSPXduBUH9GakTrv7BDeEdvnEIen0u/S+/EHq/7Dvxe/uenz0kFr7qFK8ht
+Fc2wy9BKikJlWhlxe1Ekwx+CxGEuIfH+txzK7F500GOjSAKag2ENkmOSRk4Ad7tSQ0fUdqcLvoBR
+hAWztGOa44PXPp5CGIi6+uf/5ZZ2XeMFDk/tOqx+WBWqUlseeMToFmogCRYJhjkUwR0eNYKC0IcP
+efv2VdydzqJSr7rbQ56F1uqzxaSx1yRm1jYhU8krydWSDSvj9OEorFzfoVL/R28TJkmj9C4V08up
+JLLX9+GxIpyBgWKJbgZNeReE5DPM587qEgwwT7YPJaJY+5/KWipuguuK6ll8DiIpPNfwTM9t6rXp
+UDeZMhOexxQxTn4gyiNhcswQ0ZH3OAndw/CY2HZJHh7odCnlZWR7Y8gLnyonnTctcmH9Vcf17dPv
+QMYmWXXUi6tuA2ueG78g43ugMTzf+dbJwNbCKXoI6r4px2KerWfAqnu6D//eqjkn0toRY05gSn8w
+Rwv/rWnnXZX3jT2s+X+ONPgLeHOOEFLKH2J7HVVrJITCq1dvJC6kTbdjjmaQBqNgE0YaRc2PwMWw
+zzO91GY09K80MH4wDGCvp+zdP0pofNscWBRhBXJmf64bur6e16k49JVN8Ndfzdm3DR9gROeWJ2CB
+/N8Z21eXD3LuKNmjFINcCSfdeJxvrHYXvdFT6cKz9eU+lWaoFIRdFxS7JcZaHa+K3JOrziq+lcIr
+w6K28GKjEZ71/51QTXlHIcUvJho0HTCR2LsY/RBD+B+t5GRCd6TD5aXJUnKExr1n9X3+GQ==
+`pragma protect end_protected
