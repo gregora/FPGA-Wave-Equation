@@ -65,6 +65,16 @@ int readFromSerialPort(int fd, char* buffer, size_t size)
 
 void closeSerialPort(int fd) { close(fd); }
 
+int32_t convertUnsignedCharsToSignedInt(const unsigned char* buffer) {
+    // Assuming little-endian format
+    int32_t result = (static_cast<int32_t>(buffer[0])      ) |
+                     (static_cast<int32_t>(buffer[1]) << 8 ) |
+                     (static_cast<int32_t>(buffer[2]) << 16) |
+                     (static_cast<int32_t>(buffer[3]) << 24);
+    
+    return result;
+}
+
 int main(){
     
     int N = 100;
@@ -94,10 +104,6 @@ int main(){
 
     closeSerialPort(fd);
 
-    for(int i = 0; i < N*4; i++) {
-        cout << (unsigned int) (unsigned char)buffer[i] << endl;
-    }
-
     for(int i = 0; i < N; i++) {
 
         unsigned char byte1 = buffer[i*4];
@@ -106,9 +112,9 @@ int main(){
         unsigned char byte4 = buffer[i*4 + 3];
 
         // convert four bytes to a single integer
-        u[i] = (byte1 << 24) | (byte2 << 16) | (byte3 << 8) | byte4;
+        u[i] = (byte1) | (byte2 << 8) | (byte3 << 16) | (byte4 << 24);
 
-        //cout << u[i] << endl;
+        cout << u[i] << endl;
     }
     return 0;
 
