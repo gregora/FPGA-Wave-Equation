@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# Gowin files
+
+fpga_project/impl/*
+fpga_project/*.gprj
+fpga_project/*.user

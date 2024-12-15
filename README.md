@@ -35,3 +35,11 @@ The medium is sliced into 100 finite pieces, governed by the equations above.
 I was interested into how the FPGA performed against a CPU, especially since my FPGA was pretty small, only having 9 thousand logic units.
 
 The goal of the project was both to validate the results computed on the FPGA and compare the computation speed to the C++ implementation.
+
+## C++ implementation
+### Compilation
+The project can be compiled using `make`. Simply run `make` in the root directory.
+
+## FPGA implementation
+### Upload
+`openFPGALoader -b tangnano9k -m impl/pnr/fpga_tutorial.fs`
