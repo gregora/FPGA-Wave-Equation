@@ -1,31 +1,33 @@
 [
  {
   "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
-  "InstLine" : 101,
-  "InstName" : "transmit_array",
-  "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
-  "ModuleLine" : 101,
-  "ModuleName" : "transmit_array"
- },
- {
-  "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
-  "InstLine" : 114,
+  "InstLine" : 159,
   "InstName" : "top",
   "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
-  "ModuleLine" : 114,
+  "ModuleLine" : 159,
   "ModuleName" : "top",
   "SubInsts" : [
    {
     "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
-    "InstLine" : 146,
-    "InstName" : "U1",
+    "InstLine" : 200,
+    "InstName" : "T1",
     "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
-    "ModuleLine" : 27,
-    "ModuleName" : "uart"
+    "ModuleLine" : 101,
+    "ModuleName" : "transmit_array",
+    "SubInsts" : [
+     {
+      "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+      "InstLine" : 120,
+      "InstName" : "U",
+      "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+      "ModuleLine" : 27,
+      "ModuleName" : "uart"
+     }
+    ]
    },
    {
     "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
-    "InstLine" : 148,
+    "InstLine" : 201,
     "InstName" : "W1",
     "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
     "ModuleLine" : 1,

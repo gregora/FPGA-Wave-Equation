@@ -91,7 +91,7 @@ module uart
             end
         end
 
-end
+    end
 
     assign uart_tx = bit;
     assign ready = ready_reg;
@@ -100,12 +100,57 @@ endmodule
 
 module transmit_array (
     input wire clk,
-    input wire[31:0] u[100:0],
+    input wire[32*100 - 1:0] u,
     input wire transmit, // whether to transmit or not
     output wire uart_tx,
     output wire ready // output flag if done
 
 );
+
+    reg[31:0] current_byte = 100*4; // what byte are we on
+    wire[7:0] data; // what is the data in that byte
+    reg transmit_byte = 0; // whether to transmit the next byte
+
+    wire uart_ready;
+    
+    reg ready_reg;
+    
+
+
+    uart U(.clk(clk), .data(data), .transmit(transmit_byte), .uart_tx(uart_tx), .ready(uart_ready));
+
+
+    always @(posedge clk) begin
+
+    if(current_byte != 100*4)
+    begin
+        if(uart_ready)
+        begin
+            transmit_byte <= 1;
+            current_byte <= current_byte + 1;
+        end
+        else
+        begin
+            transmit_byte <= 0;
+        end
+    end
+
+    if(current_byte == 100*4)
+        begin
+        ready_reg <= 1;
+
+        if(uart_ready && transmit)
+        begin
+            current_byte <= 0;
+            ready_reg <= 0;
+            transmit_byte <= 1;
+        end
+    end
+
+    end
+
+    assign ready = ready_reg;
+    assign data = u[current_byte*8+:8];
 
 endmodule
 
@@ -120,10 +165,10 @@ module top (
     input wire button2
     );
 
-    reg[31:0] u_arr[99:0];
-    reg[31:0] du_arr[99:0];
-    wire[31:0] u_new_arr[99:0];
-    wire[31:0] du_new_arr[99:0];
+    reg[32*100 - 1:0] u_arr;
+    reg[32*100 - 1:0] du_arr;
+    wire[32*100 - 1:0] u_new_arr;
+    wire[32*100 - 1:0] du_new_arr;
 
 
     reg[5:0] led_colors;
@@ -141,11 +186,21 @@ module top (
     wire[31:0] u_new;
 
     wire[31:0] du_new;
-   
 
-    uart U1(.clk(clk), .data(data), .transmit(transmit), .uart_tx(uart_tx), .ready(complete));
+    integer i;
+    initial begin
+        for (i = 0; i < 100; i = i + 1) begin
+            u_arr[(i)*32+:32] <= (i > 45 && i < 55) ? 200000000:
+                        0;                 
+            du_arr[i] <= 0;
+            
+        end
+    end
 
+    transmit_array T1(.clk(clk), .u(u_arr), .transmit('b1), .uart_tx(uart_tx), .ready(complete));
     wave_unit W1(.u(u), .du(du), .uL(uL), .uR(uR), .u_new(u_new), .du_new(du_new));
+
+    //uart U(.clk(clk), .data(data), .transmit('b1), .uart_tx(uart_tx), .ready(complete));
 
     always @(posedge clk) begin
         u <= u_new;
