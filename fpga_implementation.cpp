@@ -94,15 +94,21 @@ int main(){
 
     closeSerialPort(fd);
 
-
     for(int i = 0; i < N*4; i++) {
-        //cout << (int)buffer[i] << endl;
+        cout << (unsigned int) (unsigned char)buffer[i] << endl;
     }
 
     for(int i = 0; i < N; i++) {
-        // convert four bytes to an integer
-        u[i] = (buffer[4*i] << 24) | (buffer[4*i+1] << 16) | (buffer[4*i+2] << 8) | buffer[4*i+3];
-        cout << u[i] << endl;
+
+        unsigned char byte1 = buffer[i*4];
+        unsigned char byte2 = buffer[i*4 + 1];
+        unsigned char byte3 = buffer[i*4 + 2];
+        unsigned char byte4 = buffer[i*4 + 3];
+
+        // convert four bytes to a single integer
+        u[i] = (byte1 << 24) | (byte2 << 16) | (byte3 << 8) | byte4;
+
+        //cout << u[i] << endl;
     }
     return 0;
 

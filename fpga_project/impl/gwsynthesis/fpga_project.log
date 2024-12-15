@@ -1,22 +1,19 @@
 GowinSynthesis start
 Running parser ...
 Analyzing Verilog file '/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v'
-Compiling module 'top'("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":159)
-WARN  (EX3780) : Using initial value of 'uL' since it is never assigned("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":184)
-WARN  (EX3780) : Using initial value of 'uR' since it is never assigned("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":185)
-WARN  (EX3780) : Using initial value of 'u_arr' since it is never assigned("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":198)
-Compiling module 'transmit_array'("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":101)
+Compiling module 'top'("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":161)
+WARN  (EX3780) : Using initial value of 'u_arr' since it is never assigned("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":200)
+Compiling module 'transmit_array'("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":102)
 Compiling module 'uart'("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":27)
-WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":85)
-WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":90)
-Compiling module 'wave_unit'("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":1)
-WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":18)
-WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":21)
+WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":86)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":91)
+WARN  (EX1998) : Net 'u_new[31]' does not have a driver("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":188)
+WARN  (EX1998) : Net 'du_new[31]' does not have a driver("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":190)
 NOTE  (EX0101) : Current top module is "top"
 [5%] Running netlist conversion ...
-WARN  (CV0016) : Input uart_rx is unused("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":161)
-WARN  (CV0016) : Input button1 is unused("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":163)
-WARN  (CV0016) : Input button2 is unused("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":165)
+WARN  (CV0016) : Input uart_rx is unused("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":163)
+WARN  (CV0016) : Input button1 is unused("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":165)
+WARN  (CV0016) : Input button2 is unused("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":167)
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
 [15%] Optimizing Phase 1 completed
@@ -32,7 +29,6 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
-WARN  (NL0002) : The module "wave_unit" instantiated to "W1" is swept in optimizing("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":201)
 [95%] Generate netlist file "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/impl/gwsynthesis/fpga_project.vg" completed
 [100%] Generate report file "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/impl/gwsynthesis/fpga_project_syn.rpt.html" completed
 GowinSynthesis finish

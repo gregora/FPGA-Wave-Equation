@@ -46,8 +46,8 @@ module uart
 
         if(counter == 0)
         begin
-            bit <= 0;
             ready_reg <= 0;
+            bit <= 0;
         end
 
         if(counter >= 1 && counter <= 8)
@@ -62,16 +62,17 @@ module uart
 
         if(counter == 10)
         begin
-            ready_reg <= 1;
             clock_counter <= 0;
             
             if(transmit == 1)
             begin
+                ready_reg <= 0;
                 counter <= 0;
             end
 
             else
             begin
+                ready_reg <= 1;
                 counter <= 10;
             end
         end
@@ -79,7 +80,7 @@ module uart
 
         if(counter != 10)
         begin
-        if(clock_counter == 234)
+            if(clock_counter == 234)
             begin
                 clock_counter <= 0;
                 counter <= counter + 1;
@@ -100,7 +101,7 @@ endmodule
 
 module transmit_array (
     input wire clk,
-    input wire[32*100 - 1:0] u,
+    input wire[32*100-1:0] u,
     input wire transmit, // whether to transmit or not
     output wire uart_tx,
     output wire ready // output flag if done
@@ -124,7 +125,7 @@ module transmit_array (
 
     if(current_byte != 100*4)
     begin
-        if(uart_ready)
+        if(uart_ready && transmit_byte == 0)
         begin
             transmit_byte <= 1;
             current_byte <= current_byte + 1;
@@ -138,6 +139,7 @@ module transmit_array (
     if(current_byte == 100*4)
         begin
         ready_reg <= 1;
+        transmit_byte <= 0;
 
         if(uart_ready && transmit)
         begin
@@ -198,7 +200,7 @@ module top (
     end
 
     transmit_array T1(.clk(clk), .u(u_arr), .transmit('b1), .uart_tx(uart_tx), .ready(complete));
-    wave_unit W1(.u(u), .du(du), .uL(uL), .uR(uR), .u_new(u_new), .du_new(du_new));
+    //wave_unit W1(.u(u), .du(du), .uL(uL), .uR(uR), .u_new(u_new), .du_new(du_new));
 
     //uart U(.clk(clk), .data(data), .transmit('b1), .uart_tx(uart_tx), .ready(complete));
 
