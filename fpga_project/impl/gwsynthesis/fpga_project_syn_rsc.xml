@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top"/>
+<Module name="top" T_Register="15(0)" T_Lut="30(0)">
+ <SubModule name="U1" Register="15" Lut="30" T_Register="15(15)" T_Lut="30(30)"/>
+</Module>

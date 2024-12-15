@@ -7,6 +7,7 @@ Running placement......
 [10%] Placement Phase 0 completed
 [20%] Placement Phase 1 completed
 [30%] Placement Phase 2 completed
+WARN  (TA1132) :  'clk' was determined to be a clock but was not created.
 [50%] Placement Phase 3 completed
 Running routing......
 [60%] Routing Phase 0 completed
@@ -25,5 +26,5 @@ Generate file "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/impl/
 Generate file "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/impl/pnr/fpga_project.rpt.html" completed
 Generate file "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/impl/pnr/fpga_project.rpt.txt" completed
 Generate file "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/impl/pnr/fpga_project.tr.html" completed
-Thu Dec 12 16:42:21 2024
+Thu Dec 12 17:11:16 2024
 

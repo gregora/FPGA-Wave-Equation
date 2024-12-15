@@ -42,4 +42,4 @@ The project can be compiled using `make`. Simply run `make` in the root director
 
 ## FPGA implementation
 ### Upload
-`openFPGALoader -b tangnano9k -m impl/pnr/fpga_tutorial.fs`
+To upload the necessary files onto the Tang Nano 9k FPGA, simply run `make upload` or `openFPGALoader -b tangnano9k -m fpga_project/impl/pnr/fpga_project.fs`.
