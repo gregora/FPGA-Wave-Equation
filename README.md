@@ -36,10 +36,23 @@ I was interested into how the FPGA performed against a CPU, especially since my 
 
 The goal of the project was both to validate the results computed on the FPGA and compare the computation speed to the C++ implementation.
 
+## Hardware
+
+CPU part of the computation will run on a Lenovo laptop with Intel i5 processor on a single core, while the FPGA is a Tang Nano 9k.
+
+
 ## C++ implementation
+
 ### Compilation
 The project can be compiled using `make`. Simply run `make` in the root directory.
 
 ## FPGA implementation
+
+### Compilation
+
+The FPGA computation consists of two parts. First is the Verilog code that can be found in `fpga_project/src` and the second is C++ code that reads the result via serial communication.
+
+To compile the C++ part, simply run `make` and to compile Verilog file it is easiest to do so using Gowin IDE.
+
 ### Upload
 To upload the necessary files onto the Tang Nano 9k FPGA, simply run `make upload` or `openFPGALoader -b tangnano9k -m fpga_project/impl/pnr/fpga_project.fs`.
