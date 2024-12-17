@@ -75,6 +75,29 @@ int32_t convertUnsignedCharsToSignedInt(const unsigned char* buffer) {
     return result;
 }
 
+
+void find_start(char* buffer){
+
+    int start = 0;
+
+    for(int i = 0; i < 100*4; i++){
+        if(buffer[i] == 1 && buffer[i + 1] == 1 && buffer[i + 2] == 1 && buffer[i + 3] == 1){
+            start = i;
+            break;
+        }
+    }
+
+    printf("Start: %d\n", start);
+
+
+    char buffer2[100*4 + 4];
+
+    memcpy(buffer2, buffer + start, 100*4 + 4 - start);
+    memcpy(buffer2 + 100*4 + 4 - start, buffer, start);
+    memcpy(buffer, buffer2, 100*4 + 4);
+
+}
+
 int main(){
     
     int N = 100;
@@ -92,7 +115,8 @@ int main(){
 
     // read data from serial port
 
-    char buffer[100*4];
+    char buffer[100*4 + 4];
+
 
     int n = readFromSerialPort(fd, buffer, sizeof(buffer));
 
@@ -104,11 +128,13 @@ int main(){
 
     closeSerialPort(fd);
 
+    find_start(buffer);
+
     for(int i = 0; i < sizeof(buffer); i++){
         //printf("%d\n", (unsigned char) buffer[i]);
     }
 
-    for(int i = 0; i < N; i++) {
+    for(int i = 1; i < N + 1; i++) {
 
         unsigned char byte1 = buffer[i*4];
         unsigned char byte2 = buffer[i*4 + 1];

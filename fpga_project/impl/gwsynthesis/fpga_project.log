@@ -1,19 +1,19 @@
 GowinSynthesis start
 Running parser ...
 Analyzing Verilog file '/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v'
-Compiling module 'top'("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":161)
-WARN  (EX3780) : Using initial value of 'u_arr' since it is never assigned("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":200)
+Compiling module 'top'("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":178)
+WARN  (EX3780) : Using initial value of 'u_arr' since it is never assigned("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":217)
 Compiling module 'transmit_array'("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":102)
 Compiling module 'uart'("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":27)
 WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":86)
 WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":91)
-WARN  (EX1998) : Net 'u_new[31]' does not have a driver("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":188)
-WARN  (EX1998) : Net 'du_new[31]' does not have a driver("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":190)
+WARN  (EX1998) : Net 'u_new[31]' does not have a driver("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":205)
+WARN  (EX1998) : Net 'du_new[31]' does not have a driver("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":207)
 NOTE  (EX0101) : Current top module is "top"
 [5%] Running netlist conversion ...
-WARN  (CV0016) : Input uart_rx is unused("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":163)
-WARN  (CV0016) : Input button1 is unused("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":165)
-WARN  (CV0016) : Input button2 is unused("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":167)
+WARN  (CV0016) : Input uart_rx is unused("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":180)
+WARN  (CV0016) : Input button1 is unused("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":182)
+WARN  (CV0016) : Input button2 is unused("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":184)
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
 [15%] Optimizing Phase 1 completed

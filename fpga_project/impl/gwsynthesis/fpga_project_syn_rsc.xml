@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" T_Register="49(0)" T_Lut="109(0)">
- <SubModule name="T1" Register="33" Lut="69" T_Register="49(33)" T_Lut="109(69)">
-  <SubModule name="U" Register="16" Lut="40" T_Register="16(16)" T_Lut="40(40)"/>
+<Module name="top" T_Register="49(0)" T_Lut="116(0)">
+ <SubModule name="T1" Register="33" Lut="70" T_Register="49(33)" T_Lut="116(70)">
+  <SubModule name="U" Register="16" Lut="46" T_Register="16(16)" T_Lut="46(46)"/>
  </SubModule>
 </Module>

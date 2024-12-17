@@ -123,7 +123,8 @@ module transmit_array (
 
     always @(posedge clk) begin
 
-    if(current_byte != 100*4)
+    // header
+    if(current_byte < 4 && current_byte >= 0) // 4 bytes of header
     begin
         if(uart_ready && transmit_byte == 0)
         begin
@@ -136,7 +137,22 @@ module transmit_array (
         end
     end
 
-    if(current_byte == 100*4)
+    // data
+    if(current_byte <= 4 + 100*4 && current_byte >= 4) // header + 100 ints
+    begin
+        if(uart_ready && transmit_byte == 0)
+        begin
+            transmit_byte <= 1;
+            current_byte <= current_byte + 1;
+        end
+        else
+        begin
+            transmit_byte <= 0;
+        end
+    end
+
+    // wait
+    if(current_byte == 4 + 100*4) // header + 100 ints
         begin
         ready_reg <= 1;
         transmit_byte <= 0;
@@ -152,7 +168,8 @@ module transmit_array (
     end
 
     assign ready = ready_reg;
-    assign data = u[current_byte*8+:8];
+    assign data = (current_byte >= 4) ? u[(current_byte - 4)*8+:8]:
+                  'b1;
 
 endmodule
 

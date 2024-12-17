@@ -9,15 +9,15 @@
  },
  {
   "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
-  "InstLine" : 161,
+  "InstLine" : 178,
   "InstName" : "top",
   "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
-  "ModuleLine" : 161,
+  "ModuleLine" : 178,
   "ModuleName" : "top",
   "SubInsts" : [
    {
     "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
-    "InstLine" : 202,
+    "InstLine" : 219,
     "InstName" : "T1",
     "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
     "ModuleLine" : 102,
