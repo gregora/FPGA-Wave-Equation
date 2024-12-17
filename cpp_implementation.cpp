@@ -40,8 +40,9 @@ void update_cells(int* u, int* du, int N){
 
 void draw_cells(int* u, int N, sf::RenderWindow &window) {
     for(int i = 0; i < N; i++) {
-        sf::RectangleShape rectangle(sf::Vector2f(10, 10));
-        rectangle.setPosition(i*10, 400 - u[i]/1000000);
+        float height = u[i]/1000000;
+        sf::RectangleShape rectangle(sf::Vector2f(20, 100 + height));
+        rectangle.setPosition(50 + i*20, 400 - height);
         rectangle.setFillColor(sf::Color(255, 255, 255));
         window.draw(rectangle);
     }
@@ -59,13 +60,13 @@ void time_iters(int* u, int* du, int N, int iters) {
 
 int main() {
 
-    int N = 100;
+    int N = 20;
     int u[N];
     int du[N];
 
 
     for (int i = 0; i < N; i++) {
-        if(i > 45 && i < 55) {
+        if(i > 22 && i < 27) {
             u[i] = 200000000;
         } else {
             u[i] = 0;
@@ -87,7 +88,7 @@ int main() {
 
 
     for (int i = 0; i < N; i++) {
-        if(i > 45 && i < 55) {
+        if(i > 10 && i < 15) {
             u[i] = 200000000;
         } else {
             u[i] = 0;
@@ -108,8 +109,7 @@ int main() {
         window.display();
 
        
-        // sleep for 100ms
-        sf::sleep(sf::milliseconds(0));
+        sf::sleep(sf::milliseconds(1));
         //printf("frame: %d, time: %f\n", frame, ((float) frame) / 255);
     
         sf::Event event;

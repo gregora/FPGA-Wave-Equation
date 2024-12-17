@@ -1,14 +1,6 @@
 [
  {
   "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
-  "InstLine" : 1,
-  "InstName" : "wave_unit",
-  "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
-  "ModuleLine" : 1,
-  "ModuleName" : "wave_unit"
- },
- {
-  "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
   "InstLine" : 178,
   "InstName" : "top",
   "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
@@ -32,6 +24,14 @@
       "ModuleName" : "uart"
      }
     ]
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 220,
+    "InstName" : "W1",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
    }
   ]
  }

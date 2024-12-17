@@ -101,14 +101,14 @@ endmodule
 
 module transmit_array (
     input wire clk,
-    input wire[32*100-1:0] u,
+    input wire[32*20-1:0] u,
     input wire transmit, // whether to transmit or not
     output wire uart_tx,
     output wire ready // output flag if done
 
 );
 
-    reg[31:0] current_byte = 100*4; // what byte are we on
+    reg[31:0] current_byte = 20*4; // what byte are we on
     wire[7:0] data; // what is the data in that byte
     reg transmit_byte = 0; // whether to transmit the next byte
 
@@ -138,7 +138,7 @@ module transmit_array (
     end
 
     // data
-    if(current_byte <= 4 + 100*4 && current_byte >= 4) // header + 100 ints
+    if(current_byte <= 4 + 20*4 && current_byte >= 4) // header + 20 ints
     begin
         if(uart_ready && transmit_byte == 0)
         begin
@@ -152,7 +152,7 @@ module transmit_array (
     end
 
     // wait
-    if(current_byte == 4 + 100*4) // header + 100 ints
+    if(current_byte == 4 + 20*4) // header + 20 ints
         begin
         ready_reg <= 1;
         transmit_byte <= 0;
@@ -184,32 +184,32 @@ module top (
     input wire button2
     );
 
-    reg[32*100 - 1:0] u_arr;
-    reg[32*100 - 1:0] du_arr;
-    wire[32*100 - 1:0] u_new_arr;
-    wire[32*100 - 1:0] du_new_arr;
+    reg[32*20 - 1:0] u_arr;
+    reg[32*20 - 1:0] du_arr;
 
 
     reg[5:0] led_colors;
     reg[32:0] timing;
-    reg[7:0] data = 49;
+    // reg[7:0] data = 49;
     wire complete;
     reg button_pressed = 0;
     reg transmit = 1;
 
 
-    reg[31:0] u = 10;
-    reg[31:0] du = 0;
-    reg[31:0] uL = 0;
-    reg[31:0] uR = 0;
-    wire[31:0] u_new;
+    wire[31:0] u;
+    wire[31:0] du;
+    wire[31:0] uL;
+    wire[31:0] uR;
 
+    wire[31:0] u_new;
     wire[31:0] du_new;
+
+    reg[7:0] i_u = 1;
 
     integer i;
     initial begin
-        for (i = 0; i < 100; i = i + 1) begin
-            u_arr[(i)*32+:32] <= (i > 45 && i < 55) ? 200000000:
+        for (i = 0; i < 20; i = i + 1) begin
+            u_arr[(i)*32+:32] <= (i > 12 && i < 15) ? 200000000:
                         0;                 
             du_arr[i] <= 0;
             
@@ -217,16 +217,38 @@ module top (
     end
 
     transmit_array T1(.clk(clk), .u(u_arr), .transmit('b1), .uart_tx(uart_tx), .ready(complete));
-    //wave_unit W1(.u(u), .du(du), .uL(uL), .uR(uR), .u_new(u_new), .du_new(du_new));
+    wave_unit W1(.u(u), .du(du), .uL(uL), .uR(uR), .u_new(u_new), .du_new(du_new));
 
     //uart U(.clk(clk), .data(data), .transmit('b1), .uart_tx(uart_tx), .ready(complete));
 
+    reg[15:0] iter = 0;
+
     always @(posedge clk) begin
-        u <= u_new;
-        du <= du_new;
+        u_arr[0+:32] <= u_arr[32+:32];        // edge case 1
+        u_arr[19*32+:32] <= u_arr[18*32+:32]; // edge case 2
+
+        if (i_u < 19)
+        begin
+            u_arr[i_u*32+:32] <= u_new;
+            du_arr[i_u*32+:32] <= du_new;
+            
+            i_u <= i_u + 1;
+            
+        end
+
+        if (i_u == 19 && iter < 100)
+        begin
+            i_u <= 1;
+            iter = iter + 1;
+        end
+
     end
 
     assign leds = 0;
 
+    assign u = u_arr[i_u*32+:32];
+    assign du = du_arr[i_u*32+:32];
+    assign uL = u_arr[(i_u - 1)*32+:32];
+    assign uR = u_arr[(i_u + 1)*32+:32];
 
 endmodule

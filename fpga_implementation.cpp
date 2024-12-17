@@ -80,27 +80,24 @@ void find_start(char* buffer){
 
     int start = 0;
 
-    for(int i = 0; i < 100*4; i++){
+    for(int i = 0; i < 20*4; i++){
         if(buffer[i] == 1 && buffer[i + 1] == 1 && buffer[i + 2] == 1 && buffer[i + 3] == 1){
             start = i;
             break;
         }
     }
 
-    printf("Start: %d\n", start);
+    char buffer2[20*4 + 4];
 
-
-    char buffer2[100*4 + 4];
-
-    memcpy(buffer2, buffer + start, 100*4 + 4 - start);
-    memcpy(buffer2 + 100*4 + 4 - start, buffer, start);
-    memcpy(buffer, buffer2, 100*4 + 4);
+    memcpy(buffer2, buffer + start, 20*4 + 4 - start);
+    memcpy(buffer2 + 20*4 + 4 - start, buffer, start);
+    memcpy(buffer, buffer2, 20*4 + 4);
 
 }
 
 int main(){
     
-    int N = 100;
+    int N = 20;
 
     int u[N];
 
@@ -115,7 +112,7 @@ int main(){
 
     // read data from serial port
 
-    char buffer[100*4 + 4];
+    char buffer[20*4 + 4];
 
 
     int n = readFromSerialPort(fd, buffer, sizeof(buffer));

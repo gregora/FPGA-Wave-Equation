@@ -2,13 +2,15 @@ GowinSynthesis start
 Running parser ...
 Analyzing Verilog file '/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v'
 Compiling module 'top'("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":178)
-WARN  (EX3780) : Using initial value of 'u_arr' since it is never assigned("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":217)
 Compiling module 'transmit_array'("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":102)
 Compiling module 'uart'("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":27)
 WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":86)
 WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":91)
-WARN  (EX1998) : Net 'u_new[31]' does not have a driver("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":205)
-WARN  (EX1998) : Net 'du_new[31]' does not have a driver("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":207)
+Compiling module 'wave_unit'("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":1)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":18)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":21)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":235)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":242)
 NOTE  (EX0101) : Current top module is "top"
 [5%] Running netlist conversion ...
 WARN  (CV0016) : Input uart_rx is unused("/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v":180)
