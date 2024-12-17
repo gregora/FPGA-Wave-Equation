@@ -4,6 +4,8 @@
 #include <iostream>
 #include <termios.h>
 #include <unistd.h>
+#include "SFML/Graphics.hpp"
+
 using namespace std;
 
 int openSerialPort(const char* portname)
@@ -95,6 +97,17 @@ void find_start(char* buffer){
 
 }
 
+void draw_cells(int* u, int N, sf::RenderWindow &window) {
+    for(int i = 0; i < N; i++) {
+        float height = u[i]/1000000;
+        sf::RectangleShape rectangle(sf::Vector2f(50, 100 + height));
+        rectangle.setPosition(50 + i*50, 400 - height);
+        rectangle.setFillColor(sf::Color(255, 255, 255));
+        window.draw(rectangle);
+    }
+}
+
+
 int main(){
     
     int N = 20;
@@ -143,7 +156,30 @@ int main(){
 
         cout << u[i] << endl;
     }
-    return 0;
+
+
+        sf::RenderWindow window(sf::VideoMode(1100, 600), "SFML window");
+
+    int frame = 0;
+
+    while (window.isOpen()) {
+        window.clear();
+        draw_cells(u, N, window);
+        
+        window.display();
+
+       
+        sf::sleep(sf::milliseconds(1));
+        //printf("frame: %d, time: %f\n", frame, ((float) frame) / 255);
+    
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed) {
+                window.close();
+            }
+        }
+        frame = frame + 1;
+    }
 
     
 }

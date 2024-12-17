@@ -1,23 +1,23 @@
 module wave_unit(
-    input wire[31:0] u,
-    input wire[31:0] du,
-    input wire[31:0] uL,
-    input wire[31:0] uR,
-    output wire[31:0] u_new,
-    output wire[31:0] du_new
+    input wire signed[31:0] u,
+    input wire signed[31:0] du,
+    input wire signed[31:0] uL,
+    input wire signed[31:0] uR,
+    output wire signed[31:0] u_new,
+    output wire signed[31:0] du_new
     );
 
-    wire[63:0] tmp1;
-    wire[63:0] tmp2;
+    wire signed[63:0] tmp1;
+    wire signed[63:0] tmp2;
     
 
         
-    assign tmp1 = 4 * (uL + uR - 2*u) >> 8;
+    assign tmp1 = ((4 * (uL + uR - 2*u)) >>> 8);
     assign du_new = (tmp1 == -1) ? du:
                     (tmp1 != -1) ? du + tmp1:
                     0;
 
-    assign tmp2 = ((u + (du >> 8)) * 2047) >> 11;
+    assign tmp2 = (((u + (du >>> 8)) * 2047) >>> 11);
     assign u_new = tmp2;
 
 endmodule
@@ -196,20 +196,20 @@ module top (
     reg transmit = 1;
 
 
-    wire[31:0] u;
-    wire[31:0] du;
-    wire[31:0] uL;
-    wire[31:0] uR;
+    wire signed[31:0] u;
+    wire signed[31:0] du;
+    wire signed[31:0] uL;
+    wire signed[31:0] uR;
 
-    wire[31:0] u_new;
-    wire[31:0] du_new;
+    wire signed[31:0] u_new;
+    wire signed[31:0] du_new;
 
     reg[7:0] i_u = 1;
 
     integer i;
     initial begin
         for (i = 0; i < 20; i = i + 1) begin
-            u_arr[(i)*32+:32] <= (i > 12 && i < 15) ? 200000000:
+            u_arr[(i)*32+:32] <= (i > 10 && i < 15) ? 200000000:
                         0;                 
             du_arr[i] <= 0;
             

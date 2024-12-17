@@ -14,7 +14,7 @@ void cell(int u, int du, int uL, int uR, int &u_new, int &du_new) {
     du_new = du + tmp;
 
     if(du_new == -1){
-        du_new = 0;
+        //du_new = 0;
     }
 
     tmp = u + (du >> 8);
@@ -41,8 +41,8 @@ void update_cells(int* u, int* du, int N){
 void draw_cells(int* u, int N, sf::RenderWindow &window) {
     for(int i = 0; i < N; i++) {
         float height = u[i]/1000000;
-        sf::RectangleShape rectangle(sf::Vector2f(20, 100 + height));
-        rectangle.setPosition(50 + i*20, 400 - height);
+        sf::RectangleShape rectangle(sf::Vector2f(50, 100 + height));
+        rectangle.setPosition(50 + i*50, 400 - height);
         rectangle.setFillColor(sf::Color(255, 255, 255));
         window.draw(rectangle);
     }
@@ -105,11 +105,20 @@ int main() {
     while (window.isOpen()) {
         window.clear();
         draw_cells(u, N, window);
-        update_cells(u, du, N);
+        if(frame < 100){
+            update_cells(u, du, N);
+            
+            if(frame == 99){
+                for(int i = 0; i < 20; i++){
+                    printf("%d\n", u[i]);
+                }
+            }
+        }
+        
         window.display();
 
        
-        sf::sleep(sf::milliseconds(1));
+        sf::sleep(sf::milliseconds(10));
         //printf("frame: %d, time: %f\n", frame, ((float) frame) / 255);
     
         sf::Event event;
