@@ -158,7 +158,8 @@ int main(){
     }
 
 
-        sf::RenderWindow window(sf::VideoMode(1100, 600), "SFML window");
+    sf::RenderWindow window(sf::VideoMode(1100, 600), "SFML window");
+    window.setTitle("FPGA implementation - 1D Wave Equation");
 
     int frame = 0;
 

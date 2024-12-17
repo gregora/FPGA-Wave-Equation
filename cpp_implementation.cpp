@@ -96,19 +96,18 @@ int main() {
         du[i] = 0;
     }
 
-    // open sfml window
-
     sf::RenderWindow window(sf::VideoMode(1100, 600), "SFML window");
+    window.setTitle("C++ implementation - 1D Wave Equation");
 
     int frame = 0;
 
     while (window.isOpen()) {
         window.clear();
         draw_cells(u, N, window);
-        if(frame < 100){
+        if(frame < 10000){
             update_cells(u, du, N);
             
-            if(frame == 99){
+            if(frame == 9999){
                 for(int i = 0; i < 20; i++){
                     printf("%d\n", u[i]);
                 }
@@ -118,7 +117,7 @@ int main() {
         window.display();
 
        
-        sf::sleep(sf::milliseconds(10));
+        sf::sleep(sf::milliseconds(1));
         //printf("frame: %d, time: %f\n", frame, ((float) frame) / 255);
     
         sf::Event event;
