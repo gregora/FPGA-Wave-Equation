@@ -92,7 +92,7 @@ int main(){
 
     // read data from serial port
 
-    char buffer[100*32];
+    char buffer[100*4];
 
     int n = readFromSerialPort(fd, buffer, sizeof(buffer));
 
@@ -104,6 +104,10 @@ int main(){
 
     closeSerialPort(fd);
 
+    for(int i = 0; i < sizeof(buffer); i++){
+        //printf("%d\n", (unsigned char) buffer[i]);
+    }
+
     for(int i = 0; i < N; i++) {
 
         unsigned char byte1 = buffer[i*4];
@@ -112,7 +116,7 @@ int main(){
         unsigned char byte4 = buffer[i*4 + 3];
 
         // convert four bytes to a single integer
-        u[i] = (byte1) | (byte2 << 8) | (byte3 << 16) | (byte4 << 24);
+        u[i] = (byte1 << 0) | (byte2 << 8) | (byte3 << 16) | (byte4 << 24);
 
         cout << u[i] << endl;
     }
