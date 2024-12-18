@@ -163,7 +163,7 @@ int main(){
 
 
     for(int i = 0; i < sizeof(buffer); i++){
-        printf("%d\n", (unsigned char) buffer[i]);
+        //printf("%d\n", (unsigned char) buffer[i]);
     }
 
     for(int i = 1; i < N + 1; i++) {
@@ -176,7 +176,7 @@ int main(){
         // convert four bytes to a single integer
         u[i] = (byte1 << 0) | (byte2 << 8) | (byte3 << 16) | (byte4 << 24);
 
-        //cout << u[i] << endl;
+        cout << u[i] << endl;
     }
 
 
@@ -187,7 +187,7 @@ int main(){
 
     while (window.isOpen()) {
         window.clear();
-        draw_cells(u, N, window);
+        draw_cells(u + 1, N, window);
         
         window.display();
 
