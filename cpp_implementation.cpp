@@ -100,14 +100,22 @@ int main() {
     window.setTitle("C++ implementation - 1D Wave Equation");
 
     int frame = 0;
+    int image = 0;
 
     while (window.isOpen()) {
         window.clear();
         draw_cells(u, N, window);
-        if(frame < 100){
+        if(frame < 100000000){
             update_cells(u, du, N);
+
+            // save the window as a png
+
+            if(frame % 20 == 0){
+                //window.capture().saveToFile("frames/" + std::to_string(image) + ".png");
+                image++;
+            }
             
-            if(frame == 99){
+            if(frame == 9999999){
                 for(int i = 0; i < 20; i++){
                     printf("%d\n", u[i]);
                 }

@@ -36,3 +36,7 @@
 fpga_project/impl/*
 fpga_project/*.gprj
 fpga_project/*.user
+
+# Frames
+
+frames/*

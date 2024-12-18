@@ -30,7 +30,7 @@ Here $\alpha$ represents a coefficient < 1, that represents energy losses and th
 
 As computation is relatively simple, I decided to implement the algorithm both in C++ and on FPGA.
 
-The medium is sliced into 100 finite pieces, governed by the equations above.
+The medium is sliced into 20 finite pieces (limited by the small size of the FPGA), governed by the equations above.
 
 I was interested into how the FPGA performed against a CPU, especially since my FPGA was pretty small, only having 9 thousand logic units.
 
@@ -39,6 +39,17 @@ The goal of the project was both to validate the results computed on the FPGA an
 ## Hardware
 
 CPU part of the computation will run on a Lenovo laptop with Intel i5 processor on a single core, while the FPGA is a Tang Nano 9k.
+
+## Results
+
+### Verification
+
+To verify that the FPGA computed results correctly, I ran the simulation for 100 iterations. The results can be seen on the two images below.
+
+![C++ result](img/Cpp_100iters.png)
+![FPGA result](img/FPGA_100iters.png)
+
+With that, I confirmed that the algorithm running on FPGA was written correctly.
 
 
 ## C++ implementation
