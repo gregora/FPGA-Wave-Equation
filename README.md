@@ -26,6 +26,8 @@ $$
 
 Here $\alpha$ represents a coefficient < 1, that represents energy losses and thus increases stability.
 
+![Wave Equation animation](img/Cpp_video.gif)
+
 ## Computation
 
 As computation is relatively simple, I decided to implement the algorithm both in C++ and on FPGA.
