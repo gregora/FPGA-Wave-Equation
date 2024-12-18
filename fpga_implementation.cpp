@@ -78,9 +78,10 @@ int32_t convertUnsignedCharsToSignedInt(const unsigned char* buffer) {
 }
 
 
-void find_start(char* buffer){
+bool find_start(char* buffer){
 
-    int start = 0;
+    int start = -1;
+
 
     for(int i = 0; i < 20*4; i++){
         if(buffer[i] == 1 && buffer[i + 1] == 1 && buffer[i + 2] == 1 && buffer[i + 3] == 1){
@@ -89,11 +90,19 @@ void find_start(char* buffer){
         }
     }
 
+    if(start == -1){
+        return false;
+    }
+
+    printf("start: %d\n", start);
+
     char buffer2[20*4 + 4];
 
     memcpy(buffer2, buffer + start, 20*4 + 4 - start);
     memcpy(buffer2 + 20*4 + 4 - start, buffer, start);
     memcpy(buffer, buffer2, 20*4 + 4);
+
+    return true;
 
 }
 
@@ -127,21 +136,34 @@ int main(){
 
     char buffer[20*4 + 4];
 
+    bool valid = false;
+    while(!valid){
 
-    int n = readFromSerialPort(fd, buffer, sizeof(buffer));
+        int n = readFromSerialPort(fd, buffer, sizeof(buffer));
 
-    if (n < 0) {
-        cerr << "Error reading: " << strerror(errno) << endl;
-        return 1;
+        if (n < 0) {
+            cerr << "Error reading: " << strerror(errno) << endl;
+            return 1;
+        }
+
+
+        valid = find_start(buffer);
+        //valid = true;
+
+        if(!valid){
+            cout << "Invalid data" << endl;
+        }
+
     }
+
+
 
 
     closeSerialPort(fd);
 
-    find_start(buffer);
 
     for(int i = 0; i < sizeof(buffer); i++){
-        //printf("%d\n", (unsigned char) buffer[i]);
+        printf("%d\n", (unsigned char) buffer[i]);
     }
 
     for(int i = 1; i < N + 1; i++) {
@@ -154,7 +176,7 @@ int main(){
         // convert four bytes to a single integer
         u[i] = (byte1 << 0) | (byte2 << 8) | (byte3 << 16) | (byte4 << 24);
 
-        cout << u[i] << endl;
+        //cout << u[i] << endl;
     }
 
 

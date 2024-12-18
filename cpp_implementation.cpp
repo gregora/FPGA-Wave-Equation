@@ -104,10 +104,10 @@ int main() {
     while (window.isOpen()) {
         window.clear();
         draw_cells(u, N, window);
-        if(frame < 10000){
+        if(frame < 100){
             update_cells(u, du, N);
             
-            if(frame == 9999){
+            if(frame == 99){
                 for(int i = 0; i < 20; i++){
                     printf("%d\n", u[i]);
                 }

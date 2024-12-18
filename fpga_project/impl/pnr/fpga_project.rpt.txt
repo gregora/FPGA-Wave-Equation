@@ -12,27 +12,27 @@
   <Part Number>: GW1NR-LV9QN88PC6/I5
   <Device>: GW1NR-9
   <Device Version>: C
-  <Created Time>:Tue Dec 17 23:55:44 2024
+  <Created Time>:Wed Dec 18 00:40:35 2024
 
 
 2. PnR Details
 
   Running placement:
-    Placement Phase 0: CPU time = 0h 0m 0.933s, Elapsed time = 0h 0m 0.971s
-    Placement Phase 1: CPU time = 0h 0m 0.308s, Elapsed time = 0h 0m 0.33s
-    Placement Phase 2: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
-    Placement Phase 3: CPU time = 0h 0m 20s, Elapsed time = 0h 0m 20s
-    Total Placement: CPU time = 0h 0m 24s, Elapsed time = 0h 0m 24s
+    Placement Phase 0: CPU time = 0h 0m 0.939s, Elapsed time = 0h 0m 0.963s
+    Placement Phase 1: CPU time = 0h 0m 0.267s, Elapsed time = 0h 0m 0.269s
+    Placement Phase 2: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
+    Placement Phase 3: CPU time = 0h 0m 28s, Elapsed time = 0h 0m 28s
+    Total Placement: CPU time = 0h 0m 32s, Elapsed time = 0h 0m 32s
  Running routing:
     Routing Phase 0: CPU time = 0h 0m 0.003s, Elapsed time = 0h 0m 0.003s
     Routing Phase 1: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
-    Routing Phase 2: CPU time = 0h 2m 37s, Elapsed time = 0h 2m 37s
+    Routing Phase 2: CPU time = 0h 1m 41s, Elapsed time = 0h 1m 40s
     Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-    Total Routing: CPU time = 0h 2m 40s, Elapsed time = 0h 2m 40s
+    Total Routing: CPU time = 0h 1m 44s, Elapsed time = 0h 1m 43s
  Generate output files:
-    CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
+    CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
 
- Total Time and Memory Usage: CPU time = 0h 3m 5s, Elapsed time = 0h 3m 6s, Peak memory usage = 329MB
+ Total Time and Memory Usage: CPU time = 0h 2m 17s, Elapsed time = 0h 2m 16s, Peak memory usage = 325MB
 
 
 3. Resource Usage Summary
@@ -40,15 +40,15 @@
   --------------------------------------------------------------------------------
   Resources                   | Usage                               | Utilization
   --------------------------------------------------------------------------------
-  Logic                       | 2731/8640                           |  32%
-    --LUT,ALU,ROM16           | 2731(2580 LUT, 151 ALU, 0 ROM16)    | -
+  Logic                       | 2759/8640                           |  32%
+    --LUT,ALU,ROM16           | 2759(2609 LUT, 150 ALU, 0 ROM16)    | -
     --SSRAM(RAM16)            | 0                                   | -
   Register                    | 1321/6693                           |  20%
     --Logic Register as Latch | 0/6480                              |  0%
     --Logic Register as FF    | 1320/6480                           |  21%
     --I/O Register as Latch   | 0/213                               |  0%
     --I/O Register as FF      | 1/213                               |  <1%
-  CLS                         | 2171/4320                           |  51%
+  CLS                         | 2309/4320                           |  54%
   I/O Port                    | 11/71                               |  16%
   I/O Buf                     | 8                                   | -
     --Input Buf               | 1                                   | -
@@ -88,16 +88,16 @@
   Signal         | Global Clock   | Location
   -------------------------------------------
   clk_d          | PRIMARY        |  TR TL BR BL
-  n9844_3        | PRIMARY        |  TR TL BR BL
-  n9908_3        | PRIMARY        |  TR TL BR BL
-  n9588_3        | LW             |  -
-  n9620_3        | LW             |  -
-  n9652_3        | LW             |  -
-  n9684_3        | LW             |  -
-  n9716_3        | LW             |  -
-  n9748_3        | LW             |  -
-  n9780_3        | LW             |  -
-  n9812_3        | LW             |  -
+  n9876_6        | PRIMARY        |  TR TL BR BL
+  n9844_6        | PRIMARY        |  TR TL BR BL
+  n9812_6        | LW             |  -
+  n9780_6        | LW             |  -
+  n9748_6        | LW             |  -
+  n9716_6        | LW             |  -
+  n9684_9        | LW             |  -
+  n9652_6        | LW             |  -
+  n9620_6        | LW             |  -
+  n9588_7        | LW             |  -
   ===========================================
 
 

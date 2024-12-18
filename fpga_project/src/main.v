@@ -236,7 +236,7 @@ module top (
             
         end
 
-        if (i_u == 19 && iter < 10000)
+        if (i_u == 19 && iter < 100)
         begin
             i_u <= 1;
             iter = iter + 1;
