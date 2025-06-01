@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" Register="1272" Alu="15" Lut="1762" T_Register="1321(1272)" T_Alu="146(15)" T_Lut="2609(1762)" T_MULTALU36X18="1(0)">
- <SubModule name="T1" Register="33" Lut="69" T_Register="49(33)" T_Lut="806(69)">
-  <SubModule name="U" Register="16" Lut="737" T_Register="16(16)" T_Lut="737(737)"/>
+<Module name="top" Register="848" Alu="15" Lut="186" T_Register="897(848)" T_Alu="4867(15)" T_Lut="916(186)" T_MULTALU36X18="10(0)">
+ <SubModule name="[1].W" Alu="98" MULTALU36X18="1" T_Alu="98(98)" T_MULTALU36X18="1(1)"/>
+ <SubModule name="[2].W" Alu="131" MULTALU36X18="1" T_Alu="131(131)" T_MULTALU36X18="1(1)"/>
+ <SubModule name="[3].W" Alu="131" MULTALU36X18="1" T_Alu="131(131)" T_MULTALU36X18="1(1)"/>
+ <SubModule name="[4].W" Alu="131" MULTALU36X18="1" T_Alu="131(131)" T_MULTALU36X18="1(1)"/>
+ <SubModule name="[5].W" Alu="131" MULTALU36X18="1" T_Alu="131(131)" T_MULTALU36X18="1(1)"/>
+ <SubModule name="[6].W" Alu="131" MULTALU36X18="1" T_Alu="131(131)" T_MULTALU36X18="1(1)"/>
+ <SubModule name="[7].W" Alu="131" MULTALU36X18="1" T_Alu="131(131)" T_MULTALU36X18="1(1)"/>
+ <SubModule name="[8].W" Alu="131" MULTALU36X18="1" T_Alu="131(131)" T_MULTALU36X18="1(1)"/>
+ <SubModule name="[9].W" Alu="131" MULTALU36X18="1" T_Alu="131(131)" T_MULTALU36X18="1(1)"/>
+ <SubModule name="[10].W" Alu="131" MULTALU36X18="1" T_Alu="131(131)" T_MULTALU36X18="1(1)"/>
+ <SubModule name="[11].W" Alu="451" T_Alu="451(451)"/>
+ <SubModule name="[12].W" Alu="451" T_Alu="451(451)"/>
+ <SubModule name="[13].W" Alu="451" T_Alu="451(451)"/>
+ <SubModule name="[14].W" Alu="451" T_Alu="451(451)"/>
+ <SubModule name="[15].W" Alu="451" T_Alu="451(451)"/>
+ <SubModule name="[16].W" Alu="451" T_Alu="451(451)"/>
+ <SubModule name="[17].W" Alu="451" T_Alu="451(451)"/>
+ <SubModule name="[18].W" Alu="418" T_Alu="418(418)"/>
+ <SubModule name="T1" Register="33" Lut="69" T_Register="49(33)" T_Lut="730(69)">
+  <SubModule name="U" Register="16" Lut="661" T_Register="16(16)" T_Lut="661(661)"/>
  </SubModule>
- <SubModule name="W1" Alu="131" Lut="41" MULTALU36X18="1" T_Alu="131(131)" T_Lut="41(41)" T_MULTALU36X18="1(1)"/>
 </Module>

@@ -83,7 +83,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Wed Dec 18 00:40:35 2024
+<td>Sun Jun  1 15:06:06 2025
 </td>
 </tr>
 <tr>
@@ -97,24 +97,24 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td class="label">Place & Route Process</td>
 <td>Running placement:
-   Placement Phase 0: CPU time = 0h 0m 0.939s, Elapsed time = 0h 0m 0.963s
-   Placement Phase 1: CPU time = 0h 0m 0.267s, Elapsed time = 0h 0m 0.269s
-   Placement Phase 2: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
-   Placement Phase 3: CPU time = 0h 0m 28s, Elapsed time = 0h 0m 28s
-   Total Placement: CPU time = 0h 0m 32s, Elapsed time = 0h 0m 32s
+   Placement Phase 0: CPU time = 0h 0m 0.522s, Elapsed time = 0h 0m 0.518s
+   Placement Phase 1: CPU time = 0h 0m 0.394s, Elapsed time = 0h 0m 0.391s
+   Placement Phase 2: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
+   Placement Phase 3: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
+   Total Placement: CPU time = 0h 0m 6s, Elapsed time = 0h 0m 6s
 Running routing:
    Routing Phase 0: CPU time = 0h 0m 0.003s, Elapsed time = 0h 0m 0.003s
-   Routing Phase 1: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
-   Routing Phase 2: CPU time = 0h 1m 41s, Elapsed time = 0h 1m 40s
+   Routing Phase 1: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
+   Routing Phase 2: CPU time = 0h 2m 31s, Elapsed time = 0h 2m 30s
    Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-   Total Routing: CPU time = 0h 1m 44s, Elapsed time = 0h 1m 43s
+   Total Routing: CPU time = 0h 2m 35s, Elapsed time = 0h 2m 34s
 Generate output files:
-   CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
+   CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
 </td>
 </tr>
 <tr>
 <td class="label">Total Time and Memory Usage</td>
-<td>CPU time = 0h 2m 17s, Elapsed time = 0h 2m 16s, Peak memory usage = 325MB</td>
+<td>CPU time = 0h 2m 43s, Elapsed time = 0h 2m 42s, Peak memory usage = 362MB</td>
 </tr>
 </table>
 <br/>
@@ -129,12 +129,12 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">Logic</td>
-<td>2759/8640</td>
-<td>32%</td>
+<td>5985/8640</td>
+<td>70%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --LUT,ALU,ROM16</td>
-<td>2759(2609 LUT, 150 ALU, 0 ROM16)</td>
+<td>5985(890 LUT, 5095 ALU, 0 ROM16)</td>
 <td>-</td>
 </tr>
 <tr>
@@ -144,8 +144,8 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">Register</td>
-<td>1321/6693</td>
-<td>20%</td>
+<td>897/6693</td>
+<td>14%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --Logic Register as Latch</td>
@@ -154,8 +154,8 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --Logic Register as FF</td>
-<td>1320/6480</td>
-<td>21%</td>
+<td>896/6480</td>
+<td>14%</td>
 </tr>
 <tr>
 <td class="label">&nbsp &nbsp --I/O Register as Latch</td>
@@ -169,8 +169,8 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">CLS</td>
-<td>2309/4320</td>
-<td>54%</td>
+<td>3080/4320</td>
+<td>72%</td>
 </tr>
 <tr>
 <td class="label">I/O Port</td>
@@ -199,7 +199,7 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">DSP</td>
-<td>1 MULTALU36X18<br/></td><td>10%</td>
+<td>10 MULTALU36X18<br/></td><td>100%</td>
 </tr>
 </table>
 <h2><a name="I/O_Bank_Usage_Summary">I/O Bank Usage Summary:</a></h2>
@@ -231,13 +231,13 @@ Generate output files:
 </tr>
 <tr>
 <td class="label">PRIMARY</td>
-<td>3/8</td>
-<td>38%</td>
+<td>1/8</td>
+<td>13%</td>
 </tr>
 <tr>
 <td class="label">LW</td>
-<td>8/8</td>
-<td>100%</td>
+<td>1/8</td>
+<td>13%</td>
 </tr>
 <tr>
 <td class="label">GCLK_PIN</td>
@@ -259,52 +259,7 @@ Generate output files:
 <td> TR TL BR BL</td>
 </tr>
 <tr>
-<td class="label">n9876_6</td>
-<td>PRIMARY</td>
-<td> TR TL BR BL</td>
-</tr>
-<tr>
-<td class="label">n9844_6</td>
-<td>PRIMARY</td>
-<td> TR TL BR BL</td>
-</tr>
-<tr>
-<td class="label">n9812_6</td>
-<td>LW</td>
-<td> -</td>
-</tr>
-<tr>
-<td class="label">n9780_6</td>
-<td>LW</td>
-<td> -</td>
-</tr>
-<tr>
-<td class="label">n9748_6</td>
-<td>LW</td>
-<td> -</td>
-</tr>
-<tr>
-<td class="label">n9716_6</td>
-<td>LW</td>
-<td> -</td>
-</tr>
-<tr>
-<td class="label">n9684_9</td>
-<td>LW</td>
-<td> -</td>
-</tr>
-<tr>
-<td class="label">n9652_6</td>
-<td>LW</td>
-<td> -</td>
-</tr>
-<tr>
-<td class="label">n9620_6</td>
-<td>LW</td>
-<td> -</td>
-</tr>
-<tr>
-<td class="label">n9588_7</td>
+<td class="label">n1159_66</td>
 <td>LW</td>
 <td> -</td>
 </tr>

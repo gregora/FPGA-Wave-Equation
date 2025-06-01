@@ -5,8 +5,17 @@
 #include <termios.h>
 #include <unistd.h>
 #include "SFML/Graphics.hpp"
+#include <signal.h>
 
 using namespace std;
+
+int fd;
+
+void exit_handler(int sig) {
+    close(fd);
+    exit(0);
+};
+
 
 int openSerialPort(const char* portname)
 {
@@ -125,12 +134,14 @@ int main(){
 
     configureSerialPort(0, B115200);
 
-    int fd = openSerialPort("/dev/ttyUSB1");
+    fd = openSerialPort("/dev/ttyUSB1");
 
     if (fd < 0) {
         cout << "Error opening serial port" << std::endl;
         return 1;
     }
+
+    signal(SIGINT, exit_handler);
 
     // read data from serial port
 

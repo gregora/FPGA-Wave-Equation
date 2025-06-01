@@ -9,7 +9,151 @@
   "SubInsts" : [
    {
     "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
-    "InstLine" : 219,
+    "InstLine" : 215,
+    "InstName" : "[1].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[2].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[3].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[4].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[5].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[6].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[7].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[8].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[9].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[10].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[11].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[12].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[13].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[14].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[15].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[16].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[17].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 215,
+    "InstName" : "[18].W",
+    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "wave_unit"
+   },
+   {
+    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
+    "InstLine" : 226,
     "InstName" : "T1",
     "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
     "ModuleLine" : 102,
@@ -24,14 +168,6 @@
       "ModuleName" : "uart"
      }
     ]
-   },
-   {
-    "InstFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
-    "InstLine" : 220,
-    "InstName" : "W1",
-    "ModuleFile" : "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/src/main.v",
-    "ModuleLine" : 1,
-    "ModuleName" : "wave_unit"
    }
   ]
  }

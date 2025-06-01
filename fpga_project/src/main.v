@@ -195,14 +195,8 @@ module top (
     reg button_pressed = 0;
     reg transmit = 1;
 
-
-    wire signed[31:0] u;
-    wire signed[31:0] du;
-    wire signed[31:0] uL;
-    wire signed[31:0] uR;
-
-    wire signed[31:0] u_new;
-    wire signed[31:0] du_new;
+    wire signed [31:0] u_new [0:19];
+    wire signed [31:0] du_new [0:19];
 
     reg[7:0] i_u = 1;
 
@@ -212,43 +206,39 @@ module top (
             u_arr[(i)*32+:32] <= (i > 10 && i < 15) ? 200000000:
                         0;                 
             du_arr[i] <= 0;
-            
         end
     end
 
-    transmit_array T1(.clk(clk), .u(u_arr), .transmit('b1), .uart_tx(uart_tx), .ready(complete));
-    wave_unit W1(.u(u), .du(du), .uL(uL), .uR(uR), .u_new(u_new), .du_new(du_new));
+    generate
+    genvar j;
+       for (j = 1; j < 19; j = j + 1) begin
+         wave_unit W (
+            .u(u_arr[j*32+:32]),
+            .du(du_arr[j*32+:32]),
+            .uL(u_arr[(j-1)*32+:32]),
+            .uR(u_arr[(j+1)*32+:32]),
+            .u_new(u_new[j]),
+            .du_new(du_new[j])
+        );
+        end
+   endgenerate
 
+    transmit_array T1(.clk(clk), .u(u_arr), .transmit('b1), .uart_tx(uart_tx), .ready(complete));
+    
     //uart U(.clk(clk), .data(data), .transmit('b1), .uart_tx(uart_tx), .ready(complete));
 
     reg[15:0] iter = 0;
 
     always @(posedge clk) begin
-        u_arr[0+:32] <= u_arr[32+:32];        // edge case 1
-        u_arr[19*32+:32] <= u_arr[18*32+:32]; // edge case 2
+        if (iter < 100) begin
+            for (i = 1; i < 19; i = i + 1) begin
+                u_arr[i*32+:32] <= u_new[i];
+                du_arr[i*32+:32] <= du_new[i];
+            end
 
-        if (i_u < 19)
-        begin
-            u_arr[i_u*32+:32] <= u_new;
-            du_arr[i_u*32+:32] <= du_new;
-            
-            i_u <= i_u + 1;
-            
+            iter <= iter + 1;
         end
-
-        if (i_u == 19 && iter < 100)
-        begin
-            i_u <= 1;
-            iter = iter + 1;
-        end
-
     end
-
     assign leds = 0;
-
-    assign u = u_arr[i_u*32+:32];
-    assign du = du_arr[i_u*32+:32];
-    assign uL = u_arr[(i_u - 1)*32+:32];
-    assign uR = u_arr[(i_u + 1)*32+:32];
 
 endmodule

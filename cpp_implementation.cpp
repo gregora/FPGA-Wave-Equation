@@ -31,8 +31,14 @@ void update_cells(int* u, int* du, int N){
     u[0] = u[1];
     u[N-1] = u[N-2];
 
+    int temp_u[N];
+
     for(int i = 1; i < N-1; i++) {
-        cell(u[i], du[i], u[i-1], u[i+1], u[i], du[i]);
+        cell(u[i], du[i], u[i-1], u[i+1], temp_u[i], du[i]);
+    }
+
+    for(int i = 1; i < N-1; i++) {
+        u[i] = temp_u[i];
     }
 
 }
@@ -105,7 +111,7 @@ int main() {
     while (window.isOpen()) {
         window.clear();
         draw_cells(u, N, window);
-        if(frame < 100000000){
+        if(frame < 100){
             update_cells(u, du, N);
 
             // save the window as a png
