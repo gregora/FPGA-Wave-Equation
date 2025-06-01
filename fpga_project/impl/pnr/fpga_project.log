@@ -13,3 +13,18 @@ Running routing......
 [60%] Routing Phase 0 completed
 [70%] Routing Phase 1 completed
 [80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/impl/pnr/fpga_project.power.html" completed
+Generate file "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/impl/pnr/fpga_project.pin.html" completed
+Generate file "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/impl/pnr/fpga_project.rpt.html" completed
+Generate file "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/impl/pnr/fpga_project.rpt.txt" completed
+Generate file "/home/gregor/Documents/FPGA/FPGA-wave-equation/fpga_project/impl/pnr/fpga_project.tr.html" completed
+Sun Jun  1 15:16:33 2025
+
